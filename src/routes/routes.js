@@ -30,7 +30,7 @@ router.get('/devf/api/v1/cursos', (req, res) => {
     Curso
         .find()
         .exec()
-    then(curso => {
+        .then(curso => {
             res.status(200).send(curso)
         })
         .catch(error => res.status(404).error(error))
@@ -76,7 +76,9 @@ router.delete('/devf/api/v1/cursos/:id', (req, res) => {
         .findByIdAndRemove(cursoId)
         .exec()
         .then(cursoEliminado => {
-            res.status(204).send({message:'El curso se borró exitosamente'});
+            res.status(204).send({
+                message: 'El curso se borró exitosamente'
+            });
         })
         .catch(error => res.status(404).send(error));
 
@@ -102,7 +104,7 @@ router.get('/devf/api/v1/alumno', (req, res) => {
     Curso
         .find()
         .exec()
-    then(curso => {
+        .then(curso => {
             res.status(200).send(curso)
         })
         .catch(error => res.status(404).error(error))
@@ -146,7 +148,9 @@ router.delete('/devf/api/v1/alumno/:id', (req, res) => {
         .findByIdAndRemove(alumnoId)
         .exec()
         .then(alumnoEliminado => {
-            res.status(204).send({message:'El alumno se borró exitosamente'});
+            res.status(204).send({
+                message: 'El alumno se borró exitosamente'
+            });
         })
         .catch(error => res.status(404).send(error));
 
