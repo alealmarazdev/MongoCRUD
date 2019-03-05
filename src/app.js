@@ -11,7 +11,7 @@ app.use (bodyParser.urlencoded({
     extended: true
 }));
 
-app.listen(3000, () => (console.log('Servidor escuchando en el puerto 3000')));
+
 
 // app.use((req, resp, next) => {
 //     console.log('Servidor escuchando en');
@@ -24,4 +24,7 @@ mongoose.connect(db)
 .then(()=> console.log ('Conectado Mongo DB'))
 .catch(err=> console.log('Mongo error'))
 
+
+
+app.listen(3000, () => (console => (console.log('Servidor escuchando en el puerto 3000'))));
 app.use('/', indexRoutes)
