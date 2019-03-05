@@ -31,7 +31,7 @@ router.get('/devf/api/v1/cursos', (req, res) => {
         .find()
         .exec()
     then(curso => {
-            releaseEvents.status(200).send(curso)
+            res.status(200).send(curso)
         })
         .catch(error => res.status(404).error(error))
 })
@@ -103,7 +103,7 @@ router.get('/devf/api/v1/alumno', (req, res) => {
         .find()
         .exec()
     then(curso => {
-            releaseEvents.status(200).send(curso)
+            res.status(200).send(curso)
         })
         .catch(error => res.status(404).error(error))
 })
