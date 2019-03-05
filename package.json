@@ -2,7 +2,7 @@
   "name": "moncrud",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/app.js"
@@ -13,5 +13,9 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongoose": "^5.4.16"
+  },
+  "engines":{
+    "node":"10.15.1",
+    "npm":"6.4.1"
   }
 }
