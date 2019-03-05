@@ -101,11 +101,11 @@ router.post('/devf/api/v1/alumno', (req, res) => {
 
 // read
 router.get('/devf/api/v1/alumno', (req, res) => {
-    Curso
+    Alumno
         .find()
         .exec()
-        .then(curso => {
-            res.status(200).send(curso)
+        .then(alumno => {
+            res.status(200).send(alumno)
         })
         .catch(error => res.status(404).error(error))
 })
@@ -155,12 +155,6 @@ router.delete('/devf/api/v1/alumno/:id', (req, res) => {
         .catch(error => res.status(404).send(error));
 
 })
-
-
-
-
-
-
 
 
 module.exports = router;
